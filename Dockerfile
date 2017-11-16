@@ -54,8 +54,9 @@ RUN mkdir /script
 RUN mkdir /git_clone
 RUN cd /git_clone
 RUN wget https://raw.githubusercontent.com/Ewies/docker/master/supervisord.conf
-
+RUN wget https://raw.githubusercontent.com/Ewies/docker_final/master/start.sh
 RUN cp supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
+RUN cp start.sh /script
+RUN chmod +x /script/start.sh
 # Ports
 EXPOSE 8083
