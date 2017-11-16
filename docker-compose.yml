@@ -4,7 +4,7 @@ services:
         ports:
             - "8083:8083"
             - "7072:7072"
-        image: steffen/fhemfinal1
+        image: steffen/fhemfinal
         volumes:
            - /optH/fhem/:/opt/fhem
         entrypoint: ./script/start.sh
