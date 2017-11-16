@@ -1,0 +1,10 @@
+version: '2'
+services:
+   fhem:
+        ports:
+            - "8083:8083"
+            - "7072:7072"
+        image: steffen/fhem5
+        volumes:
+           - /optH/fhem/:/opt/fhem
+        entrypoint: ./script/start.sh
